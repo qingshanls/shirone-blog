@@ -1,0 +1,15 @@
+# pnpm 11 no longer reads the "pnpm" field of package.json, so its settings
+# live here. `sharp` powers Astro's image optimisation and `esbuild` loads the
+# TypeScript config. `swup`'s only install script prints an OpenCollective
+# banner and `@parcel/watcher` ships prebuilt binaries as optional deps, so
+# neither needs to build from source.
+allowBuilds:
+  '@parcel/watcher': false
+  esbuild: true
+  sharp: true
+  swup: false
+onlyBuiltDependencies:
+  - esbuild
+  - sharp
+overrides:
+  serialize-javascript: 7.0.5
