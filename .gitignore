@@ -12,7 +12,8 @@ Shirone-Content/
 
 # generated types
 .astro/
-
+.vscode/
+.agents/
 # dependencies
 node_modules/
 

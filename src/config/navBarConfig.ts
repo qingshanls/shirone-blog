@@ -130,7 +130,7 @@ export const LinkPresets: Record<string, NavBarLink> = {
 	},
 	GitHub: {
 		name: "GitHub",
-		url: "https://github.com/LyraVoid/Shirone",
+		url: "https://github.com/qingshanls",
 		icon: "fa6-brands:github",
 		external: true,
 		pageKey: "github",
@@ -143,7 +143,7 @@ const defaultNavBarConfig: NavBarConfig = {
 		LinkPresets.Archive,
 		// LinkPresets.Moments,
 		LinkPresets.Anime,
-		LinkPresets.Albums,
+		// LinkPresets.Albums,
 		{
 			name: i18n(I18nKey.more),
 			icon: "material-symbols:apps-rounded",
