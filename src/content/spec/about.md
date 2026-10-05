@@ -12,5 +12,5 @@
 <p>虽然也没东西写</p>
 <p>本站使用astro搭建</p>
 <p>主题为<a href="https://docs.shirone.mysqil.com/" >shirone</a></p>
-<p>托管在GitHub Pages</p>
+<p>托管在vercel</p>
 </div>

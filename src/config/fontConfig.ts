@@ -50,46 +50,48 @@ export const fontConfig: FontConfig = withUserConfig("font", {
 	 */
 	fontFamilies: [
 		// ---------------------------------------------------------------------
-		// 1. 正文字体（现代几何圆润西文字体 Outfit，与 M3E 大圆角及悠哉圆体绝配）
+		// 1. 正文字体（Maple Mono Medium 等宽西文，负责英文字母、数字与基础标点）
 		// ---------------------------------------------------------------------
 		{
-			id: "outfit-body",
-			family: "Outfit",
+			id: "maple-mono-body",
+			family: "Maple Mono Medium",
 			role: "body",
-			source: "fontsource",
+			source: "local",
 			variants: [
 				{
-					file: "@fontsource/outfit/400.css",
-					weight: 400,
-					style: "normal",
-				},
-				{
-					file: "@fontsource/outfit/500.css",
+					file: "src/assets/fonts/MapleMono-Medium.ttf.woff2",
 					weight: 500,
 					style: "normal",
 				},
 				{
-					file: "@fontsource/outfit/700.css",
-					weight: 700,
-					style: "normal",
+					file: "src/assets/fonts/MapleMono-MediumItalic.ttf.woff2",
+					weight: 500,
+					style: "italic",
 				},
 			],
-			fallback: ["ui-sans-serif", "system-ui", "sans-serif"],
+			fallback: [
+				"ui-monospace",
+				"SFMono-Regular",
+				"Menlo",
+				"Monaco",
+				"Consolas",
+				"monospace",
+			],
 			display: "swap",
 			preload: false,
 		},
 
 		// ---------------------------------------------------------------------
-		// 2. 中文 / 日文 CJK 字体（悠哉圆体 Yozai Medium，全量简繁中日韩 100% 覆盖）
+		// 2. 中文 / 日文 CJK 字体（霞鹜文楷等宽 LXGW WenKai Mono Medium，含 20992 个汉字）
 		// ---------------------------------------------------------------------
 		{
-			id: "yozai-cjk",
-			family: "Yozai Medium",
+			id: "lxgw-wenkai-mono-cjk",
+			family: "LXGW WenKai Mono Medium",
 			role: "cjk",
 			source: "local",
 			variants: [
 				{
-					file: "src/assets/fonts/Yozai-Medium.ttf",
+					file: "src/assets/fonts/LXGWWenKaiMono-Medium.ttf",
 					weight: 500,
 					style: "normal",
 				},
@@ -100,22 +102,22 @@ export const fontConfig: FontConfig = withUserConfig("font", {
 		},
 
 		// ---------------------------------------------------------------------
-		// 3. 代码等宽字体（渲染代码块与终端文本，对应 CSS 变量 --font-mono）
+		// 3. 代码等宽字体（沿用 Maple Mono Medium，与正文保持同一等宽观感，对应 CSS 变量 --font-mono）
 		// ---------------------------------------------------------------------
 		{
-			id: "jetbrains-mono",
-			family: "JetBrains Mono",
+			id: "maple-mono-code",
+			family: "Maple Mono Medium",
 			role: "mono",
-			source: "fontsource",
+			source: "local",
 			variants: [
 				{
-					file: "@fontsource-variable/jetbrains-mono/index.css",
-					weight: "100 800",
+					file: "src/assets/fonts/MapleMono-Medium.ttf.woff2",
+					weight: 500,
 					style: "normal",
 				},
 				{
-					file: "@fontsource-variable/jetbrains-mono/wght-italic.css",
-					weight: "100 800",
+					file: "src/assets/fonts/MapleMono-MediumItalic.ttf.woff2",
+					weight: 500,
 					style: "italic",
 				},
 			],
