@@ -1,8 +1,5 @@
-<!-- <div align=center>
-<img src="./k-on!.webp" alt="K-ON! " width="500" heigth="230" style="border-radius: 5px;">
-<P>K-ON!!!</P>
-</div> -->
-![K-ON](./k-on!.webp "K-ON!")
+<!-- ![K-ON](./k-on.webp "K-ON!") -->
+<img src="https://qingshanls.github.io/picx-images-hosting/20241130/00060.3yehktfp9g.webp" alt="k-on！" width="600" height="375">
 
 ### 关于
 

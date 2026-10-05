@@ -1,5 +1,5 @@
 ---
-title: Anime网站
+title: ACG网站
 published: 2024-06-29
 tags: [Anime]
 description: 一些acg网站

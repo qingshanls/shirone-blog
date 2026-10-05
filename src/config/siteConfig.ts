@@ -58,7 +58,7 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 		// 数组顺序就是轮播顺序；只需要静态 Banner 时，每组保留一张图片即可。
 		src: {
 			desktop: ["assets/images/banner/desktop/bg.webp"],
-			mobile: ["assets/images/banner/mobile/bg.webp"],
+			mobile: ["assets/images/banner/mobile/2.jpeg"],
 		},
 		// 图片裁切焦点："top"、"center" 或 "bottom"。
 		position: "center",
@@ -71,13 +71,7 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 			// 仅在首页 Banner 中显示，标题与副标题会上下居中排列。
 			enable: true,
 			title: "",
-			subtitle: [
-				"特別なことはないけど、君がいると十分です",
-				"今でもあなたは私の光",
-				"君ってさ、知らないうちに私の毎日になってたよ",
-				"君と話すと、なんか毎日がちょっと楽しくなるんだ",
-				"今日はなんでもない日。でも、ちょっとだけいい日",
-			],
+			subtitle: ["我们所经历的每个平凡的日常，也许就是连续发生的奇迹。"],
 			typewriter: {
 				// 副标题逐字显示；关闭后直接显示完整副标题。
 				enable: true,

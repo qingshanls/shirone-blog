@@ -141,7 +141,6 @@ const defaultNavBarConfig: NavBarConfig = {
 	links: [
 		LinkPresets.Home,
 		LinkPresets.Archive,
-		// LinkPresets.Moments,
 		LinkPresets.Anime,
 		// LinkPresets.Albums,
 		{
@@ -155,6 +154,7 @@ const defaultNavBarConfig: NavBarConfig = {
 				// 需要时取消注释即可
 				// LinkPresets.Categories,
 				// LinkPresets.Tags,
+				LinkPresets.Moments,
 				LinkPresets.About,
 				LinkPresets.GitHub,
 			],
