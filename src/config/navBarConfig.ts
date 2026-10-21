@@ -142,6 +142,7 @@ const defaultNavBarConfig: NavBarConfig = {
 		LinkPresets.Home,
 		LinkPresets.Archive,
 		LinkPresets.Anime,
+		LinkPresets.Moments,
 		// LinkPresets.Albums,
 		{
 			name: i18n(I18nKey.more),
@@ -154,7 +155,7 @@ const defaultNavBarConfig: NavBarConfig = {
 				// 需要时取消注释即可
 				// LinkPresets.Categories,
 				// LinkPresets.Tags,
-				LinkPresets.Moments,
+
 				LinkPresets.About,
 				LinkPresets.GitHub,
 			],

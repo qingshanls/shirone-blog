@@ -70,8 +70,15 @@ export const siteConfig: SiteConfig = withUserConfig("site", {
 		homeText: {
 			// 仅在首页 Banner 中显示，标题与副标题会上下居中排列。
 			enable: true,
-			title: "",
-			subtitle: ["我们所经历的每个平凡的日常，也许就是连续发生的奇迹。"],
+			title: "青山蓝山の站",
+			subtitle: [
+				"我们所经历的每个平凡的日常，也许就是连续发生的奇迹。",
+				"我已经…不会再放弃任何事了！",
+				"跨越每一秒的世界线，只为了守护，你的笑容……",
+				"不要忘记，无论你在哪条世界线都不是孤单一人，有我在",
+				"和绝望，和睦相处。",
+				"那么，我就去彷徨了。",
+			],
 			typewriter: {
 				// 副标题逐字显示；关闭后直接显示完整副标题。
 				enable: true,
