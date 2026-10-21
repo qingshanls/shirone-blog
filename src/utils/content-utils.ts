@@ -1,4 +1,5 @@
 import { type CollectionEntry, getCollection } from "astro:content";
+import { seriesConfig } from "@/config/seriesConfig";
 import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import {
@@ -19,8 +20,14 @@ import { getCategoryUrl, getPostUrl, url } from "@utils/url-utils";
  * 加载系列实体目录（Astro 内容层会缓存集合加载，多次调用成本可忽略）。
  * 放在 content-utils 而不是 series-utils，是为了让 series-utils 保持纯函数、
  * 可在 node --test 下直接导入。
+ *
+ * 系列功能关闭时直接返回空目录：否则空集合会让 Astro 内容层在每次渲染时刷
+ * 「collection "series" does not exist or is empty」——本函数在几乎每个页面的
+ * 渲染路径上，逐页产生该警告。关闭即零查询，与 `seriesConfig.enable` 的
+ * 零额外负担约定一致。
  */
 export async function getSeriesCatalog(): Promise<Map<string, SeriesEntity>> {
+	if (!seriesConfig.enable) return new Map();
 	const entries = await getCollection("series");
 	const catalog = new Map<string, SeriesEntity>();
 	for (const entry of entries) {
@@ -56,16 +63,19 @@ async function getRawSortedPosts(): Promise<CollectionEntry<"posts">[]> {
 		);
 	}
 
-	// 引用未知系列的笔误：宽容忽略，但给出一次性构建期警告（dev/build 日志可见）
-	for (const ref of findUnknownSeriesSlugs(
-		sorted.map((post) => ({ slug: post.id, series: post.data.series })),
-		seriesCatalog,
-	)) {
-		if (!warnedUnknownSeries.has(ref.slug)) {
-			warnedUnknownSeries.add(ref.slug);
-			console.warn(
-				`[series] post "${ref.postSlug}" references unknown series "${ref.slug}" — series card and default-category fallback are skipped`,
-			);
+	// 引用未知系列的笔误：宽容忽略，但给出一次性构建期警告（dev/build 日志可见）。
+	// 系列功能关闭时目录必然为空，此时不报「未知系列」以免误导。
+	if (seriesConfig.enable) {
+		for (const ref of findUnknownSeriesSlugs(
+			sorted.map((post) => ({ slug: post.id, series: post.data.series })),
+			seriesCatalog,
+		)) {
+			if (!warnedUnknownSeries.has(ref.slug)) {
+				warnedUnknownSeries.add(ref.slug);
+				console.warn(
+					`[series] post "${ref.postSlug}" references unknown series "${ref.slug}" — series card and default-category fallback are skipped`,
+				);
+			}
 		}
 	}
 
