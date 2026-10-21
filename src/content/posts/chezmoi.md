@@ -70,7 +70,7 @@ git push -u origin main
 
 假设你的工作电脑和笔记本使用不同的 Git 用户名，可以在 `~/.local/share/chezmoi/home/.gitconfig.tmpl` 中这样写：
 
-```gotemplate
+```ini
 [user]
     name = {{ if eq .chezmoi.hostname "work-laptop" }}工作姓名{{ else }}个人姓名{{ end }}
     email = {{ if eq .chezmoi.hostname "work-laptop" }}work@email.com{{ else }}personal@email.com{{ end }}

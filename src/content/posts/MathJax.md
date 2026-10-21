@@ -9,42 +9,42 @@ mathjax: true
 ## 1. 基础符号
 
 ### 希腊字母
-```mathjax
+```text
 $$\alpha, \beta, \Gamma, \Delta, \theta, \Omega$$
 ```
 $$\alpha, \beta, \Gamma, \Delta, \theta, \Omega$$
 
-```mathjax
+```text
 $$\epsilon, \varepsilon, \phi, \varphi$$
 ```
 $$\epsilon, \varepsilon, \phi, \varphi$$
 
 ### 上下标
 
-```mathjax
+```text
 $$x_i, x^2, x^{y^z}, x_{i,j}, e^{-\alpha t}$$
 ```
 $$x_i, x^2, x^{y^z}, x_{i,j}, e^{-\alpha t}$$
 
 ### 分式
-```mathjax
+```text
 $$\frac{a}{b}$$
 ```
 $$\frac{a}{b}$$
 
-```mathjax
+```text
 $$\dfrac{1+\frac{a}{b}}{1+\frac{b}{a}}$4
 ```
 $$\dfrac{1+\frac{a}{b}}{1+\frac{b}{a}}$$
 
 ### 根号
-```mathjax
+```text
 $$\sqrt{x}, \sqrt[n]{x}$$
 ```
 $$\sqrt{x}, \sqrt[n]{x}$$
 
 ### 求和与积分
-```mathjax
+```text
 $$\sum_{i=1}^n a_i$$,  
 $$\int_a^b f(x) \, dx$$,  
 $$\iint_D dA$$,  
@@ -56,7 +56,7 @@ $$\iint_D dA$$
 $$\oint_C \mathbf{F} \cdot d\mathbf{r}$$
 
 ### 极限与导数
-```mathjax
+```text
 $$\lim_{x \to 0} \frac{\sin x}{x} = 1$$  
 $$f'(x), \frac{df}{dx}, \frac{\partial^2 u}{\partial x^2}$$
 ```
@@ -68,7 +68,7 @@ $$f'(x), \frac{df}{dx}, \frac{\partial^2 u}{\partial x^2}$$
 ## 2. 矩阵与方程组
 
 ### 矩阵
-```mathjax
+```text
 $$
 \begin{pmatrix}
   a & b \\
@@ -100,7 +100,7 @@ $$
 $$
 
 ### 分段函数
-```mathjax
+```text
 $$
 f(n) = 
 \begin{cases} 

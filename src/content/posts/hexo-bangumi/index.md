@@ -106,7 +106,7 @@ hexo new page cinemans
 ```
 在主题文件配置中添加
 
-```YML
+```yml
 menu: 
     ...
      番剧: 

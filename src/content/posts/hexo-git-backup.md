@@ -12,7 +12,7 @@ description: 使用GIT备份hexo源码
 
 1.登录GitHub并创建仓库，设置为私密
 2.在hexo根目录创建`.gitignore`文件，设置要忽略的文件或文件夹，填写不需要备份的文件和文件夹。
-```TXT
+```txt
 .DS_Store
 Thumbs.db
 db.json
