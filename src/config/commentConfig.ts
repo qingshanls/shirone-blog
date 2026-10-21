@@ -37,9 +37,9 @@ import { withUserConfig } from "../utils/config-overlay.ts";
  */
 export const commentConfig: CommentConfig = withUserConfig("comment", {
 	/** 全局评论总开关：false 时完全不加载评论脚本与 DOM */
-	enable: false,
+	enable: true,
 	/** 评论提供商类型："none" | "twikoo" | "giscus" | "waline" */
-	provider: "none",
+	provider: "waline",
 	/** 是否开启视口懒加载：滚动进入视口才动态加载评论组件（推荐 true） */
 	lazy: true,
 	/** Twikoo 专有配置 */
@@ -83,7 +83,7 @@ export const commentConfig: CommentConfig = withUserConfig("comment", {
 	/** Waline 专有配置：https://waline.js.org/ */
 	waline: {
 		/** 服务端地址（必填）；留空时不渲染评论区 */
-		serverURL: "",
+		serverURL: "https://waline.qingshanls.icu",
 		/** 完整 UMD 客户端，按需加载；升级时与下面的 CSS 保持同版本 */
 		scriptUrl:
 			"https://cdn.jsdelivr.net/npm/@waline/client@3.16.1/dist/waline.umd.js",
@@ -95,7 +95,7 @@ export const commentConfig: CommentConfig = withUserConfig("comment", {
 		/** 可选文案覆盖；省略的字段使用 Waline 当前语言默认值 */
 		locale: {
 			/** 评论输入框提示；空字符串不显示提示 */
-			placeholder: "Share your thoughts...",
+			placeholder: "",
 		},
 		/** false 关闭表情，true 使用默认表情；也可混合填写预设 URL 与自定义表情对象 */
 		emoji: true,
@@ -112,13 +112,13 @@ export const commentConfig: CommentConfig = withUserConfig("comment", {
 		/** 每页条数 */
 		pageSize: 10,
 		/** 图片上传：true 时 Waline 将图片编码为 Base64，false 关闭；只接受 true / false，不支持自定义函数 */
-		imageUploader: true,
+		imageUploader: false,
 		/** 代码高亮：true 使用 Waline 内置高亮器，false 关闭；只接受 true / false */
 		highlighter: true,
 		/** TeX：true 在预览中提示不支持 TeX，false 不解析 TeX；只接受 true / false */
 		texRenderer: false,
 		/** 是否隐藏页脚版权信息 */
-		noCopyright: false,
+		noCopyright: true,
 		/** 是否隐藏 RSS 订阅链接 */
 		noRss: true,
 		/** reCAPTCHA v3 密钥 */
@@ -126,7 +126,7 @@ export const commentConfig: CommentConfig = withUserConfig("comment", {
 		/** Cloudflare Turnstile 密钥 */
 		turnstileKey: "",
 		/** 是否显示文章表情反应 */
-		reaction: true,
+		reaction: false,
 	},
 });
 
