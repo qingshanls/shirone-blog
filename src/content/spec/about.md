@@ -1,5 +1,6 @@
 <!-- ![K-ON](./k-on.webp "K-ON!") -->
-<img src="https://qingshanls.github.io/picx-images-hosting/20241130/00060.3yehktfp9g.webp" alt="k-on！" width="600" height="375">
+
+![Image description w-80%](https://qingshanls.github.io/picx-images-hosting/20241130/00060.3yehktfp9g.webp "K-ON!")
 
 ### 关于
 
